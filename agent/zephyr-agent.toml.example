@@ -1,0 +1,10 @@
+# Copy to zephyr-agent.toml (next to where you run the agent) and edit.
+# CLI flags override these; environment (ZEPHYR_AGENT_*) sits in between.
+
+workspace = "~/zephyrproject"
+vivado-settings = "/tools/Xilinx/Vivado/2025.1/settings64.sh"
+board = "mbv32"                       # or a Cortex-R52 RPU board
+serial = "/dev/ttyUSB0"
+# dev-id = "210308AABBCC"             # JTAG cable id, if multiple are attached
+# bitstream = "/path/to/system.pdi"   # PDI/bitstream for flashing
+model = "claude-opus-4-8"             # used by `zephyr-agent ask`

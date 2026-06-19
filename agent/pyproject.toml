@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zephyr-agent"
+version = "0.1.0"
+description = "Gated CLI agent for debugging Zephyr RTOS on AMD Versal hardware (west/lopper/xsdb/twister)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "tkarcheski" }]
+keywords = ["zephyr", "versal", "west", "xsdb", "jtag", "twister", "ztest"]
+
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+dev = ["pytest>=7", "anthropic>=0.40"]
+
+[project.scripts]
+zephyr-agent = "zephyr_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zephyr_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
