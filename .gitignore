@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Zephyr / west build + test output
+twister-out*/
+*.elf
+*.bin
+*.pdi
+
+# Local agent config (committed example is zephyr-agent.toml.example)
+zephyr-agent.toml
+
+# Editors / OS
+.DS_Store
+*.swp
